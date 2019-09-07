@@ -1,0 +1,17 @@
+$woonkly-black-blue: #09072e;
+$woonkly-light-blue: #00d3ff;
+$woonkly-dark-blue: #02004a;
+// w/opacity
+$woonkly-light-blue-opacity: rgba(0, 211, 255, 0.5);
+$woonkly-light-blue-quarter-opacity: rgba(0, 211, 255, 0.25);
+
+:root {
+  --woonkly-black-blue: #{$woonkly-black-blue};
+  --woonkly-light-blue: #{$woonkly-light-blue};
+  --woonkly-dark-blue: #{$woonkly-dark-blue};
+  --woonkly-light-blue-opacity: #{$woonkly-light-blue-opacity};
+  --woonkly-light-blue-quarter-opacity: #{$woonkly-light-blue-quarter-opacity};
+  --woonkly-gradient-1: linear-gradient(to right, #{$woonkly-dark-blue}, #{$woonkly-light-blue});
+  --woonkly-radial-gradient-1: radial-gradient(circle, rgba(0,36,85,1) 0%, rgba(3,30,77,1) 14.53%, rgba(12,9,52,1) 67.66%, rgba(16,2,43,1) 100%);
+  --woonkly-gradient-to-bottom: linear-gradient(to bottom, #{$woonkly-black-blue}, #{$woonkly-dark-blue});
+}

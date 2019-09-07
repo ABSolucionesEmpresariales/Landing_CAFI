@@ -158,6 +158,17 @@ i {
   font-size: 20px;
 }
 
+/* Validar CURP */
+
+#resultado {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+#resultado.ok {
+    background-color: green;
+}
+
 
 /* Registrar Form */
 
