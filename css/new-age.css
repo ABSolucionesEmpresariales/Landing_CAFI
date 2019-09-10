@@ -160,8 +160,8 @@
    padding-bottom: 100px;
    color: white;
    background: url("../img/bg-pattern.png"), #0a2c4a;
-   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#0a2c4a), to(#5B2787));
-   background: url("../img/bg-pattern.png"), linear-gradient(to left, ##5B2787, #0a2c4a);
+   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#00727B), to(#5B2787));
+   background: url("../img/bg-pattern.png"), linear-gradient(to left, #5B2787, #00727B);
  }
 
  header.masthead .header-content {
@@ -206,6 +206,7 @@
  section.download {
    position: relative;
    padding: 150px 0;
+   background: #00727B;
  }
 
  section.download h2 {
@@ -325,6 +326,7 @@
 
  section.contact {
    text-align: center;
+   background-color: #2B4F81;
  }
 
  section.contact h2 {
@@ -400,7 +402,7 @@
  }
 
  .bg-primary {
-   background: #fdcc52;
+   background: #0a2c4a;
    background: -webkit-gradient(linear, left top, left bottom, from(#fdcc52), to(#fdc539));
    background: linear-gradient(#fdcc52, #fdc539);
  }
