@@ -159,9 +159,9 @@
    padding-top: 150px;
    padding-bottom: 100px;
    color: white;
-   background: url("../img/bg-pattern.png"), #0a2c4a;
-   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#00727B), to(#5B2787));
-   background: url("../img/bg-pattern.png"), linear-gradient(to left, #5B2787, #00727B);
+   background: url("../img/bg-pattern.png"), #444444;
+   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#444444), to(#313131));
+   background: url("../img/bg-pattern.png"), linear-gradient(to left, #000000, #000000);
  }
 
  header.masthead .header-content {
@@ -206,7 +206,7 @@
  section.download {
    position: relative;
    padding: 150px 0;
-   background: #00727B;
+   background-color: #00727B;
  }
 
  section.download h2 {
@@ -236,6 +236,82 @@
 
  @media (min-width: 768px) {
    section.download h2 {
+     font-size: 70px;
+   }
+ }
+
+
+ section.anuncio {
+   position: relative;
+   padding: 150px 0;
+   background: #3A5743;
+ }
+
+ section.anuncio h2 {
+   font-size: 50px;
+   margin-top: 0;
+ }
+
+ section.anuncio .badges .badge-link {
+   display: block;
+   margin-bottom: 25px;
+ }
+
+ section.anuncio .badges .badge-link:last-child {
+   margin-bottom: 0;
+ }
+
+ section.anuncio .badges .badge-link img {
+   height: 60px;
+ }
+
+ @media (min-width: 768px) {
+   section.anuncio .badges .badge-link {
+     display: inline-block;
+     margin-bottom: 0;
+   }
+ }
+
+ @media (min-width: 768px) {
+   section.anuncio h2 {
+     font-size: 70px;
+   }
+ }
+
+
+ section.registro {
+   position: relative;
+   padding: 150px 0;
+   background: #00727B;
+ }
+
+ section.registro h2 {
+   font-size: 50px;
+   margin-top: 0;
+ }
+
+ section.registro .badges .badge-link {
+   display: block;
+   margin-bottom: 25px;
+ }
+
+ section.registro .badges .badge-link:last-child {
+   margin-bottom: 0;
+ }
+
+ section.registro .badges .badge-link img {
+   height: 60px;
+ }
+
+ @media (min-width: 768px) {
+   section.registro .badges .badge-link {
+     display: inline-block;
+     margin-bottom: 0;
+   }
+ }
+
+ @media (min-width: 768px) {
+   section.registro h2 {
      font-size: 70px;
    }
  }
