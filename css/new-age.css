@@ -160,7 +160,7 @@
    padding-bottom: 100px;
    color: white;
    background: url("../img/bg-pattern.png"), #313131;
-   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#313131), to(#444444));
+   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#000000), to(#313131));
    background: url("../img/bg-pattern.png"), linear-gradient(to left, #444444, #000000);
  }
 
