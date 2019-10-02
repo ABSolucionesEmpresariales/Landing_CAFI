@@ -1,0 +1,58 @@
+// light
+@font-face {
+  font-family: 'Futura';
+  src: url(/fonts/light.ttf) format('truetype'),
+       url(/fonts/light.woff) format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+// normal
+@font-face {
+  font-family: 'Futura';
+  src: url(/fonts/medium.ttf) format('truetype'),
+       url(/fonts/medium.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// bold
+@font-face {
+  font-family: 'Futura';
+  src: url(/fonts/bold.ttf) format('truetype'),
+       url(/fonts/bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: expanded;
+}
+
+// bolder
+@font-face {
+  font-family: 'Futura';
+  src: url(/fonts/heavy.ttf) format('truetype'),
+       url(/fonts/heavy.woff) format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+// Font styles for SVGs
+
+.svg-text {
+  font-family: 'Futura';
+
+  &.title {
+    font-size: 25px;
+  }
+
+  &.sub {
+    font-size: 16px;
+  }
+
+  &.blue {
+    fill: var(--woonkly-light-blue);
+  }
+
+  &.white {
+    fill: white;
+  }
+}
