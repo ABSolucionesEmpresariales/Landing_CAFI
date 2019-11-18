@@ -6,14 +6,16 @@ $pagina = $_POST['pagina'];
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
+$domicilio = $_POST['domicilio'];
+$ciudad = $_POST['ciudad'];
+$estado = $_POST['estado'];
+$pais = $_POST['pais'];
 $paquete = $_POST['paquete'];
 $carrera = $_POST['carrera'];
 $experiencia = $_POST['experiencia'];
 
 
-if(isset($pagina) && !empty($nombre) && !empty($email) && !empty($telefono)){
-
-
+if(isset($pagina) && !empty($nombre) && !empty($email) && !empty($telefono) && !empty($domicilio) && !empty($ciudad) && !empty($estado) && !empty($pais)){
 
   if($pagina === "paquetes"){
     $email_to = "ventas@cafionline.com";
@@ -42,6 +44,10 @@ if(isset($pagina) && !empty($nombre) && !empty($email) && !empty($telefono)){
   $email_message .= "Nombre: ".clean_string($nombre)."\n";
   $email_message .= "E-mail: ".clean_string($email)."\n";
   $email_message .= "Telefono: ".clean_string($telefono)."\n";
+  $email_message .= "Domicilio: ".clean_string($domicilio)."\n";
+  $email_message .= "Ciudad: ".clean_string($ciudad)."\n";
+  $email_message .= "Estado: ".clean_string($estado)."\n";
+  $email_message .= "Pais: ".clean_string($pais)."\n";
   $email_message .= "Paquete: ".clean_string($paquete)."\n";
 
   // create email headers
@@ -51,7 +57,7 @@ if(isset($pagina) && !empty($nombre) && !empty($email) && !empty($telefono)){
   @mail($email_to, $email_subject, $email_message, $headers);
 
 if(!empty($paquete) && $pagina === "paquetes"){
-  $sql = "INSERT INTO contacto_landing (nombre, email, telefono, paquete) VALUES ('$nombre', '$email', '$telefono', '$paquete')";
+  $sql = "INSERT INTO contacto_landing (nombre, email, telefono, domicilio, ciudad, estado, pais, paquete) VALUES ('$nombre', '$email', '$telefono', '$domicilio', '$ciudad', '$estado', '$pais', '$paquete')";
   $result = mysqli_query($link, $sql);
 
   //Send status
@@ -81,5 +87,4 @@ if(!empty($paquete) && $pagina === "paquetes"){
   die;
 
 }
-
 }

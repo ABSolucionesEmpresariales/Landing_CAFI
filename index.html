@@ -1,3 +1,21 @@
+<?
+//Creación de una cookie básica
+setcookie("cookie","valorCookie");
+
+//Cookie que se destruirá en 3600 segundos
+
+setcookie("cookie", "Hola", time()+3600, "/", ".http://localhost/Landing_CAFI/", true, true);
+
+//Como recuperar cookies
+setcookie("cookie", "Cafi");
+//Accedemos a la cookie con  $_COOKIE y el nombre de la cookie
+$contenido = $_COOKIE["cookie"]; //$contenido vale Juan
+
+//Ahora la volvemos a crear con el tiempo expirado. Así se elimina
+setcookie("cookie", "Cafi", time() - 10);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +27,7 @@
   <meta name="author" content="">
   <meta property="og:image" content="http://www.cafionline.com/masthead.png"/>
 
-  <title>Landing CAFI Punto De Venta</title>
+  <title>CAFI Punto De Venta</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +48,9 @@
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
 
+  <div style="float:right">
+
+  </div>
 
 </head>
 
@@ -61,35 +82,42 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link trigger-btn" data-toggle="modal" href="#login">Login</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="registrar.html">Registrate</a>
           </li>
-        </ul>
-      </div>
-    </div>
+
+          <li class="nav-item">
+            <a class="btn btn-primary btn-lg" style="color: white;" data-toggle="modal" href="#login">Login</a>
+          </li>
+        </div>
   </nav>
 
   <div class="login modal fade" id="login">
   	<div class="modal-dialog modal-login">
   		<div class="modal-content">
   			<div class="modal-header">
-  				<h4 class="modal-title" style="color: #0574CB; font-weight: bold;">Iniciar Sesión</h4>
+  				<h4 class="modal-title" style="color: #EF5602; font-weight: bold;">Iniciar Sesión</h4>
   				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   			</div>
   			<div class="modal-body">
-  				<form action="/examples/actions/confirmation.php" method="post">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="nav-Cliente-tab" data-toggle="tab" href="#Cliente" role="tab" aria-controls="Cliente" aria-selected="false" style="color: #0574CB;">Cliente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nav-Asesor-tab" data-toggle="tab" href="#Asesor" role="tab" aria-controls="Asesor" aria-selected="true" style="color: #0574CB;">Asesor</a>
+            </li>
+        </ul>
+  				<form action="/examples/actions/confirmation.php" method="post" id="myLogin">
   					<div class="form-group">
   						<i class="fa fa-user"></i>
-  						<input name="TUsuario" type="text" class="form-control" id="registrar-usuario" placeholder="Usuario" required="required">
+  						<input name="TUsuario" type="text" class="form-control" id="ingresar-usuario" placeholder="Usuario" required="required">
   					</div>
   					<div class="form-group">
   						<i class="fa fa-lock"></i>
-  						<input name="TPassword" type="password" class="form-control" id="registrar-password" placeholder="Contraseña" required="required">
+  						<input name="TPassword" type="password" class="form-control" id="ingresar-password" placeholder="Contraseña" required="required">
   					</div>
   					<div class="form-group">
-  						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+  						<input type="submit" class="btn btn-block btn-lg" style="background: #EF5602; color: white;" value="Login">
   					</div>
   				</form>
 
@@ -99,8 +127,10 @@
       </p>
 
   			</div>
+
   			<div class="modal-footer">
   			</div>
+
   		</div>
   	</div>
   </div>
@@ -219,9 +249,8 @@
               <div class="card-footer">
                <a style="color: #0574CB;; font-weight: bold;">Incluye</a>
                 <p style="color: white;">
-                  -2 usuario(s) / sucursal(es) <br>
+                  -2 usuario(s) por sucursal <span style="font-size: 12px; font-weight: bold;"><br>* usuario adicional $99</span> <br>
                   <br>-3 horas de soporte (no acumulable) <br>
-                  <br>-usuario extra $99 <br>
                   <br>-Administra trabajadores<br>
                   <br>-Conoce tus productos más vendidos<br>
                   <br>-Realiza ventas a crédito o de contado<br>
@@ -248,9 +277,8 @@
             <div class="card-footer">
             <a style="color: #0574CB; font-weight: bold;">Incluye</a>
             <p style="color: white;">
-              -3 usuario(s) / sucursal(es)<br>
+              -3 usuario(s) por sucursal <span style="font-size: 12px; font-weight: bold;"><br>* usuario adicional $99</span><br>
               <br>-5 horas de soporte (no acumulable)<br>
-              <br>-usuario extra $99<br>
               <br>-Administra trabajadores<br>
               <br>-Obten reportes financieros (pérdidas y ganancias)<br>
               <br>-Conoce tus productos más vendidos<br>
@@ -281,9 +309,8 @@
             <div class="card-footer">
               <a style="color: #0574CB; font-weight: bold;">Incluye</a>
               <p style="color: white;">
-              -4 usuario(s) / sucursal(es) <br>
+              -4 usuario(s) por sucursal <span style="font-size: 12px; font-weight: bold;"><br>* usuario adicional $99</span><br>
                 <br>-7 horas de soporte (no acumulable) <br>
-                <br>-usuario extra $99 <br>
                 <br>-Administra trabajadores<br>
                 <br>-Obten reportes financieros (pérdidas y ganancias)<br>
                 <br>-Realiza ventas a crédito o de contado<br>
@@ -341,7 +368,7 @@
 
               <div class="card-footer">
                 <a style="font-weight: bold;">Vuélvete un Asesor Administrativo
-                brindando apoyo a nuestros usuarios en la correcta toma de decisiones y el manejo adecuado de su empresa.</a>
+                brindando apoyo a nuestros usuarios en la correcta toma de decisiones y el manejo adecuado de su empresa.</a> <br><br>
                 <p>
                   <br><a class="btn btn-primary" href="asesor.html">¡Comienza ya!</a></br>
                 </p>
@@ -378,7 +405,7 @@
               </div>
 
               <div class="card-footer">
-                <a style="font-weight: bold;">Dale valor a tu tiempo libre, genera ingresos haciendo lo que amas y ayudando a los demás; conoce el mundo a través de CAFI.</a>
+                <a style="font-weight: bold;">Dale valor a tu tiempo libre, genera ingresos haciendo lo que amas y ayudando a los demás; conoce el mundo a través de CAFI.</a><br><br><br>
                 <p>
                   <br><a class="btn btn-primary" href="distribuidor.html">¡Comienza ya!</a></br>
                 </p>
@@ -404,6 +431,12 @@
           </a>
         </li>
 
+        <li class="list-inline-item social-whatsapp">
+          <a href="https://api.whatsapp.com/send?phone=523173881158">
+          <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+
         <li class="list-inline-item social-instagram">
           <a href="#">
             <i class="fab fa-instagram"></i>
@@ -418,7 +451,7 @@
 <!-- Footer -->
   <footer class="page-down" id="terms">
     <div class="container">
-      <p>&copy; CAFI Punto De Venta 2019. All Rights Reserved.</p>
+      <p>Copyright &copy; CAFI Punto De Venta 2019. All Rights Reserved.</p>
       <ul class="list-inline">
         <li class="list-inline-item">
           <a href="privacidad.html">Policy privacy</a>

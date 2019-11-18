@@ -16,6 +16,10 @@
   <!-- Custom styles for this template -->
   <link href="css/shop-item.css" rel="stylesheet">
 
+  <div style="float:right">
+    <a class="btn btn-danger btn-sm" href="http://www.cafionline.com/">Cerrar Sesión</a>
+    </div>
+
 </head>
 
 <body>
@@ -30,7 +34,7 @@
       <div class="col-lg-9">
 
         <div class="card mt-4">
-          <video src="img/CAFI.mp4" poster="img/indice.jpg" controls width="100%"></video>
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/LVx4y7-AAPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
         <!-- /.card -->
@@ -55,32 +59,53 @@
       <!-- /.col-lg-9 -->
 
       <div class="col-lg-3">
-        <div class="list-group active">
-          <li class="nav-item dropleft">
-            <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="certificate.html" role="button" aria-haspopup="true" aria-expanded="false">Nivel 1</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="certificate.html">Video 1</a>
-              <a class="dropdown-item" href="certificate2.html">Video 2</a>
-              <a class="dropdown-item" href="certificate3.html">Video 3</a>
-            </li>
-          <a href="certificate4.html" class="list-group-item active">Nivel 2</a>
-          <a href="certificate5.html" class="list-group-item">Nivel 3</a>
+
+        <div class="list-group">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="certificate.html" role="button">Capitulo 1</a>
+              <div class="dropdown-menu">
+              <dd id="smenu1">
+                <ul>
+                  <li><a href="certificate.html">Lección 1.1</a></li>
+                  <li><a href="certificate2.html">Lección 1.2</a></li>
+            </ul>
+          </dd>
         </div>
       </div>
-      <!-- /.col-lg-3 -->
+
+      <div class="list-group">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="certificate.html" role="button">Capitulo 2</a>
+            <div class="dropdown-menu">
+            <dd id="smenu2">
+              <ul>
+                <li><a href="certificate3.html">Lección 2.1</a></li>
+                <li><a href="certificate4.html" class="dropdown-item active">Lección 2.2</a></li>
+          </ul>
+        </dd>
+      </div>
+    </div>
+
+    <div class="list-group">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="certificate.html" role="button">Capitulo 3</a>
+          <div class="dropdown-menu">
+          <dd id="smenu3">
+            <ul>
+              <li><a href="certificate5.html">Lección 3.1</a></li>
+        </ul>
+      </dd>
+    </div>
   </div>
 
-    </div>
+  <!-- /.col-lg-3 -->
+        </div>
 
     </div>
-
   </div>
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; CAFI Punto De Venta 2019. All Rights Reserved.</p>
     </div>
     <!-- /.container -->
   </footer>
